@@ -39,6 +39,7 @@
   - [ساخت فایل zip برای اشتراک‌گذاری](#ساخت-فایل-zip-برای-اشتراکگذاری)
   - [ساختار پروژه](#ساختار-پروژه)
   - [حریم خصوصی و مجوزها](#حریم-خصوصی-و-مجوزها)
+  - [ارتباط با ما / پشتیبانی](#ارتباط-با-ما--پشتیبانی)
   - [مشارکت](#مشارکت)
 - [English](#english)
   - [What is this?](#what-is-this)
@@ -54,6 +55,7 @@
   - [Building a shareable zip](#building-a-shareable-zip)
   - [Project structure](#project-structure)
   - [Privacy & permissions](#privacy--permissions)
+  - [Contact / Support](#contact--support)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -227,6 +229,14 @@ Smart-RTL-Aligner-extensions/
 - **`storage`**: برای ذخیرهٔ حالت انتخابی شما به ازای هر دامنه، فقط روی همان مرورگر (نه سرور بیرونی).
 - **`tabs`**: فقط برای خواندن hostname تب فعال (تا تنظیمات را برای همان سایت ذخیره/اعمال کند) و ارسال پیام به آن تب.
 - اکستنشن هیچ درخواست شبکه‌ای نمی‌فرستد، هیچ دیتایی جمع‌آوری یا آپلود نمی‌کند، و کاملاً متن‌باز و قابل بازبینی است (کل کد در همین ۵ فایل کوچک خلاصه می‌شود).
+
+### ارتباط با ما / پشتیبانی
+
+اگر سوالی دارید، باگی پیدا کردید، یا پیشنهادی برای بهبود اکستنشن دارید:
+
+- 🐛 **گزارش باگ / درخواست ویژگی**: از بخش [Issues همین ریپازیتوری](https://github.com/ahmad75naraghi/Smart-RTL-Aligner-extensions/issues) استفاده کنید.
+- 📧 **ایمیل**: [ahmad.falnic@gmail.com](mailto:ahmad.falnic@gmail.com)
+- 📢 **کانال تلگرام**: [t.me/evented_ir](https://t.me/evented_ir)
 
 ### مشارکت
 
@@ -408,6 +418,14 @@ Smart-RTL-Aligner-extensions/
 - **`storage`**: saves your chosen mode per domain, locally in your own browser only — never sent anywhere.
 - **`tabs`**: only used to read the active tab's hostname (so settings can be scoped per site) and to message that tab.
 - The extension makes no network requests, collects no data, and is fully open source — the entire logic fits in a handful of small files you can read yourself.
+
+### Contact / Support
+
+Got a question, found a bug, or have an idea to improve the extension?
+
+- 🐛 **Report a bug / request a feature**: use [this repo's Issues](https://github.com/ahmad75naraghi/Smart-RTL-Aligner-extensions/issues).
+- 📧 **Email**: [ahmad.falnic@gmail.com](mailto:ahmad.falnic@gmail.com)
+- 📢 **Telegram channel**: [t.me/evented_ir](https://t.me/evented_ir)
 
 ### Contributing
 
