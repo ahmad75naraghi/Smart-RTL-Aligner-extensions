@@ -1,0 +1,83 @@
+/* =========================================
+   محافظت سراسری برای کدهای برنامه نویسی 
+   (در تمامی ۵ حالت اعمال می‌شود)
+========================================= */
+html[data-rtl-mode]:not([data-rtl-mode="0"]) pre,
+html[data-rtl-mode]:not([data-rtl-mode="0"]) pre *,
+html[data-rtl-mode]:not([data-rtl-mode="0"]) code,
+html[data-rtl-mode]:not([data-rtl-mode="0"]) code *,
+html[data-rtl-mode]:not([data-rtl-mode="0"]) .code-block,
+html[data-rtl-mode]:not([data-rtl-mode="0"]) textarea,
+html[data-rtl-mode]:not([data-rtl-mode="0"]) input[type="url"],
+html[data-rtl-mode]:not([data-rtl-mode="0"]) input[type="email"],
+html[data-rtl-mode]:not([data-rtl-mode="0"]) input[type="password"] {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* =========================================
+   Mode 1: Aggressive (خشن - مشابه نسخه قبل)
+========================================= */
+html[data-rtl-mode="1"] body, 
+html[data-rtl-mode="1"] div, 
+html[data-rtl-mode="1"] p, 
+html[data-rtl-mode="1"] span {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* =========================================
+   Mode 2: Soft (نرم - فقط کانتینرهای اصلی)
+========================================= */
+html[data-rtl-mode="2"] body,
+html[data-rtl-mode="2"] main,
+html[data-rtl-mode="2"] article,
+html[data-rtl-mode="2"] section {
+    direction: rtl !important;
+}
+
+/* =========================================
+   Mode 3: Text-Only (حفظ ساختار گرید/فلکس، فقط متن)
+========================================= */
+html[data-rtl-mode="3"] p,
+html[data-rtl-mode="3"] h1, html[data-rtl-mode="3"] h2,
+html[data-rtl-mode="3"] h3, html[data-rtl-mode="3"] h4,
+html[data-rtl-mode="3"] h5, html[data-rtl-mode="3"] h6,
+html[data-rtl-mode="3"] span,
+html[data-rtl-mode="3"] li,
+html[data-rtl-mode="3"] td,
+html[data-rtl-mode="3"] a {
+    text-align: right !important;
+    /* Direction LTR remains intact to preserve layout */
+}
+
+/* =========================================
+   Mode 4: Content-Focused (فقط تگ‌های محتوایی)
+========================================= */
+html[data-rtl-mode="4"] p,
+html[data-rtl-mode="4"] h1, html[data-rtl-mode="4"] h2,
+html[data-rtl-mode="4"] h3, html[data-rtl-mode="4"] h4,
+html[data-rtl-mode="4"] h5, html[data-rtl-mode="4"] h6,
+html[data-rtl-mode="4"] ul, html[data-rtl-mode="4"] ol,
+html[data-rtl-mode="4"] li,
+html[data-rtl-mode="4"] table {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* =========================================
+   Mode 5: AI Chat Optimized (تارگت اختصاصی هوش مصنوعی)
+========================================= */
+html[data-rtl-mode="5"] .prose,
+html[data-rtl-mode="5"] .markdown,
+html[data-rtl-mode="5"] .message-content,
+html[data-rtl-mode="5"] [data-message-author-role="assistant"],
+html[data-rtl-mode="5"] [data-message-author-role="user"] {
+    direction: rtl !important;
+    text-align: right !important;
+}
+/* جلوگیری از بهم ریختگی آیکون‌ها و باتن‌ها در چت AI */
+html[data-rtl-mode="5"] .prose button,
+html[data-rtl-mode="5"] .markdown button {
+    direction: ltr !important;
+}

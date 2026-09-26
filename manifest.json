@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Smart RTL Aligner",
+  "version": "1.0.0",
+  "author": "Ahmad Naraghi",
+  "description": "Multi-mode RTL aligner with domain persistence, optimized for AI chats and standard web layouts.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RTL Settings"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["rtl.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 220px; font-family: sans-serif; padding: 10px; margin: 0; background: #f9f9f9; }
+        h4 { margin: 0 0 10px 0; font-size: 14px; text-align: center; color: #333; }
+        .mode-btn { 
+            display: block; width: 100%; padding: 8px; margin-bottom: 5px; 
+            border: 1px solid #ddd; background: #fff; cursor: pointer; 
+            border-radius: 4px; text-align: left; font-size: 13px; transition: 0.2s;
+        }
+        .mode-btn:hover { background: #eee; }
+        .mode-btn.active { background: #007bff; color: white; border-color: #0056b3; font-weight: bold; }
+        .mode-btn.off { border-color: #dc3545; color: #dc3545; text-align: center; margin-top: 10px; }
+        .mode-btn.off.active { background: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <h4>RTL Alignment Mode</h4>
+    <button class="mode-btn" data-mode="1">1. Aggressive (All Tags)</button>
+    <button class="mode-btn" data-mode="2">2. Soft (Main Containers)</button>
+    <button class="mode-btn" data-mode="3">3. Text-Only (Preserve Layout)</button>
+    <button class="mode-btn" data-mode="4">4. Content-Focused (P, H, LI)</button>
+    <button class="mode-btn" data-mode="5">5. AI Chat Optimized</button>
+    <button class="mode-btn off" data-mode="0">Turn OFF</button>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
