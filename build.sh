@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Smart RTL Aligner — packaging script
 #
-# Builds distributable, store-ready .zip packages for:
+# Builds distributable .zip packages for manual/self installation
+# (no browser store submission involved):
 #   - Chrome / Edge / other Chromium browsers (uses manifest.json)
 #   - Firefox (uses manifest.firefox.json)
 #
@@ -9,8 +10,8 @@
 #   ./build.sh
 #
 # Output:
-#   dist/smart-rtl-aligner-chrome.zip
-#   dist/smart-rtl-aligner-firefox.zip
+#   dist/smart-rtl-aligner-chrome-<version>.zip
+#   dist/smart-rtl-aligner-firefox-<version>.zip
 
 set -euo pipefail
 cd "$(dirname "$0")"
