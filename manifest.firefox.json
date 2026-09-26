@@ -3,8 +3,14 @@
   "name": "Smart RTL Aligner",
   "version": "1.1.0",
   "author": "Ahmad Naraghi",
-  "description": "Multi-mode RTL aligner with per-site persistence, optimized for AI chats and standard web layouts. Works on Chrome, Edge and other Chromium browsers.",
+  "description": "Multi-mode RTL aligner with per-site persistence, optimized for AI chats and standard web layouts. Works on Firefox 109+.",
   "homepage_url": "https://github.com/ahmad75naraghi/Smart-RTL-Aligner-extensions",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "smart-rtl-aligner@ahmadnaraghi",
+      "strict_min_version": "109.0"
+    }
+  },
   "action": {
     "default_popup": "popup.html",
     "default_title": "RTL Settings",

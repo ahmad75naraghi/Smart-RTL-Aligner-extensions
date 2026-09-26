@@ -1,14 +1,21 @@
+// Cross-browser compatibility: Firefox exposes the promise-based `browser`
+// namespace natively, while Chrome/Edge use `chrome` (also promise-based
+// since Manifest V3). Falling back keeps a single codebase working everywhere.
+const api = typeof browser !== "undefined" ? browser : chrome;
+
 const hostname = window.location.hostname;
 
 // 1. اعمال وضعیت هنگام لود صفحه
-chrome.storage.local.get([hostname], (result) => {
+api.storage.local.get([hostname]).then((result) => {
     const mode = result[hostname] || "0";
     applyMode(mode);
+}).catch((err) => {
+    console.error("Smart RTL Aligner: failed to read stored mode.", err);
 });
 
 // 2. گوش دادن به تغییرات از سمت Popup
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === "set_rtl_mode") {
+api.runtime.onMessage.addListener((request) => {
+    if (request && request.action === "set_rtl_mode") {
         applyMode(request.mode);
     }
 });
